@@ -56,11 +56,11 @@ require.helper.semVerSort = function(a, b) {
 
 /**
  * Find and require a module which name starts with the provided name.
- * If multiple modules exists, the highest semver is used. 
+ * If multiple modules exists, the highest semver is used.
  * This function can only be used for remote dependencies.
 
  * @param {String} name - module name: `user~repo`
- * @param {Boolean} returnPath - returns the canonical require path if true, 
+ * @param {Boolean} returnPath - returns the canonical require path if true,
  *                               otherwise it returns the epxorted module
  */
 require.latest = function (name, returnPath) {
@@ -83,7 +83,7 @@ require.latest = function (name, returnPath) {
           semVerCandidates.push({version: version, name: moduleName});
         } else {
           otherCandidates.push({version: version, name: moduleName});
-        } 
+        }
     }
   }
   if (semVerCandidates.concat(otherCandidates).length === 0) {
@@ -225,18 +225,13 @@ function transitions(el, styl){
  * Style.
  */
 
-var styl = document.body.style;
+//var styl = document.body.style;
 
 /**
  * Export support.
  */
 
-var bool = 'transition' in styl
-  || 'webkitTransition' in styl
-  || 'MozTransition' in styl
-  || 'msTransition' in styl;
-
-});
+var bool = true;
 
 require.register("component~event@0.1.4", function (exports, module) {
 var bind = window.addEventListener ? 'addEventListener' : 'attachEvent',
@@ -327,7 +322,7 @@ CssEmitter.prototype.bind = function(fn){
 
 /**
  * Unbind CSS events
- * 
+ *
  * @api public
  */
 
@@ -340,7 +335,7 @@ CssEmitter.prototype.unbind = function(fn){
 
 /**
  * Fire callback only once
- * 
+ *
  * @api public
  */
 
@@ -1079,8 +1074,8 @@ Move.prototype.set = function(prop, val){
     }
   } else {
     this.transition(prop);
-    this._props[prop] = val;  
-  } 
+    this._props[prop] = val;
+  }
   return this;
 };
 
