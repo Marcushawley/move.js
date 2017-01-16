@@ -4,7 +4,7 @@
 
 var Emitter = require('component-emitter');
 var query = require('component-query');
-var after = require('after-transition');
+var after = require('./src/after-transition');
 var has3d = require('has-translate3d');
 var ease = require('css-ease');
 
